@@ -1,0 +1,13 @@
+{
+  "name": "spiltcoffee.github.io",
+  "private": true,
+  "scripts": {
+    "postdfm": "node postdfm.js",
+    "prebuild": "yarn install --frozen-lockfile",
+    "build": "yarn postdfm"
+  },
+  "devDependencies": {
+    "execa": "^2.0.3",
+    "fs-extra": "^8.1.0"
+  }
+}
