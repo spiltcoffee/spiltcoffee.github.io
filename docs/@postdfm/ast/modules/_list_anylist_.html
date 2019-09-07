@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>postdfm | postdfm</title>
+	<title>&quot;list/anyList&quot; | @postdfm/ast</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2347,7 +2347,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">postdfm</a></strong>
+					<strong><a href="../index.html">@postdfm/ast</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2377,152 +2377,37 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+			<a href="_list_anylist_.html#anylist" class="tsd-kind-icon">Any<wbr>List</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<a href="#postdfm" id="postdfm" style="color: inherit; text-decoration: none;">
-				<h1>postdfm</h1>
-			</a>
-			<blockquote>
-				<p>Process over Delphi Forms (.dfm) files via an AST.</p>
-				<p>Inspired by the excellent PostCSS tool, motivated by my rage at the Delphi IDE.</p>
-			</blockquote>
-			<p><a href="https://www.npmjs.com/package/postdfm"><img src="https://img.shields.io/npm/v/postdfm.svg?label=npm" alt="npm"></a>
-				<a href="https://circleci.com"><img src="https://img.shields.io/circleci/project/github/spiltcoffee/postdfm/master.svg" alt="CircleCI branch"></a>
-				<a href="https://codecov.io"><img src="https://img.shields.io/codecov/c/gh/spiltcoffee/postdfm/master.svg" alt="Codecov branch"></a>
-			<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/spiltcoffee/postdfm.svg" alt="Greenkeeper"></a></p>
-			<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
-				<h2>Table of Contents</h2>
-			</a>
-			<ul>
-				<li><a href="#installation">Installation</a></li>
-				<li><a href="#example-usage">Example Usage</a></li>
-				<li><a href="#reference">Reference</a></li>
-				<li><a href="#contributing">Contributing</a></li>
-				<li><a href="#license">License</a></li>
-			</ul>
-			<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-				<h2>Installation</h2>
-			</a>
-			<p>The <code>postdfm</code> project is an interface wrapping all the separate modules together.</p>
-			<pre><code class="language-shell"><span class="hljs-meta">#</span><span class="bash"> npm</span>
-<span class="hljs-meta">$</span><span class="bash"> npm install postdfm</span>
-<span class="hljs-meta">
-#</span><span class="bash"> yarn</span>
-<span class="hljs-meta">$</span><span class="bash"> yarn add postdfm</span></code></pre>
-			<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
-				<h2>Example Usage</h2>
-			</a>
-			<pre><code class="language-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"fs"</span>);
-<span class="hljs-keyword">const</span> postdfm = <span class="hljs-built_in">require</span>(<span class="hljs-string">"postdfm"</span>);
-
-<span class="hljs-keyword">const</span> cisDfm = fs.readFileSync(
-  <span class="hljs-string">"cis.dfm"</span>,
-  <span class="hljs-comment">//.dfm files tend to be ascii instead of utf8</span>
-  <span class="hljs-string">"ascii"</span>
-);
-
-<span class="hljs-keyword">const</span> runner = postcss({
-  <span class="hljs-attr">transformers</span>: [
-    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ast</span>) </span>{
-      <span class="hljs-comment">//transform and return the ast</span>
-      <span class="hljs-keyword">return</span> transformedAst;
-    }
-  ]
-});
-
-<span class="hljs-keyword">const</span> transDfm = runner.processSync(dfm, {
-  <span class="hljs-comment">//filename used for reporting errors</span>
-  <span class="hljs-keyword">from</span>: <span class="hljs-string">"cis.dfm"</span>
-});
-
-fs.writeFileSync(<span class="hljs-string">"trans.dfm"</span>, transDfm);</code></pre>
-			<a href="#reference" id="reference" style="color: inherit; text-decoration: none;">
-				<h2>Reference</h2>
-			</a>
-			<a href="#coderunnercode-instance" id="coderunnercode-instance" style="color: inherit; text-decoration: none;">
-				<h3><code>Runner</code> instance</h3>
-			</a>
-			<p>Create a runner by calling the <code>postdfm</code> function.</p>
-			<pre><code class="language-js"><span class="hljs-keyword">const</span> postdfm = <span class="hljs-built_in">require</span>(<span class="hljs-string">"postdfm"</span>);
-<span class="hljs-keyword">const</span> runner = postdfm();</code></pre>
-			<a href="#codepostdfmoptions-runneroptionscode" id="codepostdfmoptions-runneroptionscode" style="color: inherit; text-decoration: none;">
-				<h4><code>postdfm(options?: RunnerOptions)</code></h4>
-			</a>
-			<p>Create a <code>Runner</code> instance using <code>RunnerOptions</code></p>
-			<a href="#coderunnerprocessdfm-string-processingoptions-processingoptions-promiseltstringgtcode" id="coderunnerprocessdfm-string-processingoptions-processingoptions-promiseltstringgtcode" style="color: inherit; text-decoration: none;">
-				<h4><code>runner.process(dfm: string, processingOptions: ProcessingOptions): Promise&lt;string&gt;</code></h4>
-			</a>
-			<p>Process a file through the runner asynchronously.</p>
-			<a href="#coderunnerprocesssyncdfm-string-processingoptions-processingoptions-stringcode" id="coderunnerprocesssyncdfm-string-processingoptions-processingoptions-stringcode" style="color: inherit; text-decoration: none;">
-				<h4><code>runner.processSync(dfm: string, processingOptions: ProcessingOptions): string</code></h4>
-			</a>
-			<p>Process a file through the runner synchronously.</p>
-			<a href="#coderunneroptionscode" id="coderunneroptionscode" style="color: inherit; text-decoration: none;">
-				<h3><code>RunnerOptions</code></h3>
-			</a>
-			<p>Options to pass to an instance of <code>Runner</code>.</p>
-			<a href="#codeoptionstransformers-transformercode" id="codeoptionstransformers-transformercode" style="color: inherit; text-decoration: none;">
-				<h4><code>options.transformers: Transformer[]</code></h4>
-			</a>
-			<p>Array of transformations to perform on AST.</p>
-			<a href="#codeoptionsparser-parser--quotpostdfmdfm2astquotcode" id="codeoptionsparser-parser--quotpostdfmdfm2astquotcode" style="color: inherit; text-decoration: none;">
-				<h4><code>options.parser: Parser = &quot;@postdfm/dfm2ast&quot;</code></h4>
-			</a>
-			<p>Parser to use, defaults to <code>@postdfm/dfm2ast</code>.</p>
-			<a href="#codeoptionsstringifier-stringifier--quotpostdfmast2dfmquotcode" id="codeoptionsstringifier-stringifier--quotpostdfmast2dfmquotcode" style="color: inherit; text-decoration: none;">
-				<h4><code>options.stringifier: Stringifier = &quot;@postdfm/ast2dfm&quot;</code></h4>
-			</a>
-			<p>Stringifier to use, defaults to <code>@postdfm/ast2dfm</code>.</p>
-			<a href="#codetransformercode" id="codetransformercode" style="color: inherit; text-decoration: none;">
-				<h3><code>Transformer</code></h3>
-			</a>
-			<p>A function that takes an AST, transforms it, and returns it.</p>
-			<pre><code class="language-js">(ast: AST.Root): AST.Root</code></pre>
-			<a href="#codeparsercode" id="codeparsercode" style="color: inherit; text-decoration: none;">
-				<h3><code>Parser</code></h3>
-			</a>
-			<p>A function that takes a string, parses it, and returns an AST.</p>
-			<pre><code class="language-js">(dfm: string): AST.Root</code></pre>
-			<a href="#codestringifiercode" id="codestringifiercode" style="color: inherit; text-decoration: none;">
-				<h3><code>Stringifier</code></h3>
-			</a>
-			<p>A function that takes an AST, stringifies it, and returns a string.</p>
-			<pre><code class="language-js">(ast: AST.Root): string</code></pre>
-			<a href="#codeprocessingoptionscode" id="codeprocessingoptionscode" style="color: inherit; text-decoration: none;">
-				<h3><code>ProcessingOptions</code></h3>
-			</a>
-			<a href="#codeprocessingoptionsfromcode" id="codeprocessingoptionsfromcode" style="color: inherit; text-decoration: none;">
-				<h4><code>processingOptions.from</code></h4>
-			</a>
-			<p>The file which is being processed. Used when throwing syntax errors.</p>
-			<a href="#generated-documentation" id="generated-documentation" style="color: inherit; text-decoration: none;">
-				<h2>Generated Documentation</h2>
-			</a>
-			<p>You can find the generated <code>typedoc</code> documentation <a href="https://spiltcoffee.com/docs/postdfm/">here</a>.</p>
-			<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
-				<h2>Contributing</h2>
-			</a>
-			<p>Bug reports and feature requests are greatly appreciated, as are pull requests.</p>
-			<p>Please see the <a href="https://github.com/spiltcoffee/postdfm/blob/master/.github/CONTRIBUTING.md">Contributing Guide</a> for instructions on how to contribute to this project.</p>
-			<a href="#license" id="license" style="color: inherit; text-decoration: none;">
-				<h2>License</h2>
-			</a>
-			<p>Licensed under the MIT License.</p>
-		</div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>External modules</h3>
+						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_list_anylist_.html#anylist" class="tsd-kind-icon">Any<wbr>List</a></li>
 						</ul>
 					</section>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+				<a name="anylist" class="tsd-anchor"></a>
+				<h3>Any<wbr>List</h3>
+				<div class="tsd-signature tsd-kind-icon">Any<wbr>List<span class="tsd-signature-symbol">:</span> <a href="../classes/_list_binarystringlist_.binarystringlist.html" class="tsd-signature-type">BinaryStringList</a><span class="tsd-signature-symbol"> | </span><a href="../classes/_list_identifierlist_.identifierlist.html" class="tsd-signature-type">IdentifierList</a><span class="tsd-signature-symbol"> | </span><a href="../classes/_list_variantlist_.variantlist.html" class="tsd-signature-type">VariantList</a><span class="tsd-signature-symbol"> | </span><a href="../classes/_list_itemlist_.itemlist.html" class="tsd-signature-type">ItemList</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/0ef03ad/packages/@postdfm/ast/src/list/anyList.ts#L6">list/anyList.ts:6</a></li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
