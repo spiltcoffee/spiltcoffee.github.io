@@ -16933,7 +16933,7 @@ var render = function() {
       "button",
       {
         staticClass:
-          "m-2 mt-0 w-6 h-6 rounded hover:bg-gray-100 active:bg-gray-200 hover:shadow-md text-center text-green-700 hover:text-green-600 active:text-green-500 transition",
+          "m-2 mt-0 w-6 h-6 rounded hover:bg-gray-100 active:bg-gray-200 hover:shadow-md text-center text-green-700 hover:text-green-600 active:text-green-500 transition flex justify-center items-center",
         on: {
           click: function($event) {
             return _vm.$emit("add")
@@ -16947,7 +16947,7 @@ var render = function() {
       "button",
       {
         staticClass:
-          "m-2 mt-0 w-6 h-6 rounded hover:bg-gray-100 active:bg-gray-200 hover:shadow-md text-center text-red-700 hover:text-red-600 active:text-red-500 transition",
+          "m-2 mt-0 w-6 h-6 rounded hover:bg-gray-100 active:bg-gray-200 hover:shadow-md text-center text-red-700 hover:text-red-600 active:text-red-500 transition flex justify-center items-center",
         on: {
           click: function($event) {
             return _vm.$emit("remove")
@@ -17064,7 +17064,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "m-2 w-6 h-6 rounded text-white text-center shadow-md transition",
+              "m-2 w-6 h-6 rounded text-white text-center shadow-md transition flex justify-center items-center",
             class: _vm.playable
               ? "bg-green-700 hover:bg-green-600 active:bg-green-500 hover:shadow-lg"
               : "bg-gray-300 cursor-default",
@@ -17081,7 +17081,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "m-2 w-6 h-6 rounded bg-blue-700 hover:bg-blue-600 active:bg-blue-500 text-white text-center shadow-md hover:shadow-lg transition",
+              "m-2 w-6 h-6 rounded bg-blue-700 hover:bg-blue-600 active:bg-blue-500 text-white text-center shadow-md hover:shadow-lg transition flex justify-center items-center",
             on: {
               click: function($event) {
                 return _vm.$emit("pause")
@@ -17095,7 +17095,7 @@ var render = function() {
       "button",
       {
         staticClass:
-          "m-2 w-6 h-6 rounded text-white text-center shadow-md transition",
+          "m-2 w-6 h-6 rounded text-white text-center shadow-md transition flex justify-center items-center",
         class: _vm.stoppable
           ? "bg-red-700 hover:bg-red-600 active:bg-red-500 hover:shadow-lg"
           : "bg-gray-300 cursor-default",
@@ -34388,7 +34388,7 @@ var render = function() {
     "button",
     {
       staticClass:
-        "absolute w-8 h-8 top-0 left-0 mt-min ml-min flex justify-center items-center rounded-full shadow-md hover:shadow-lg drag-none text-blue-700 hover:text-blue-600 active:text-blue-500 transition"
+        "absolute w-8 h-8 top-0 left-0 mt-min ml-min rounded-full shadow-md hover:shadow-lg drag-none text-blue-700 hover:text-blue-600 active:text-blue-500 transition flex justify-center items-center"
     },
     [
       _c("vue-svg-gauge", {
