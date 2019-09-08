@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "postdfm": "node postdfm.js",
+    "stopwatch": "node stopwatch.js",
     "prebuild": "yarn install --frozen-lockfile",
-    "build": "yarn postdfm"
+    "build": "yarn postdfm && yarn stopwatch"
   },
   "devDependencies": {
     "execa": "^2.0.3",

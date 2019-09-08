@@ -2,8 +2,8 @@ const path = require("path");
 const fs = require("fs-extra");
 const execa = require("execa");
 
-fs.ensureDirSync(path.join(__dirname, "temp"));
-fs.emptyDirSync(path.join(__dirname, "temp"));
+fs.ensureDirSync(path.join(__dirname, "temp", "postdfm"));
+fs.emptyDirSync(path.join(__dirname, "temp", "postdfm"));
 
 execa.sync("git", ["clone", "git@github.com:spiltcoffee/postdfm.git"], {
   shell: true,
