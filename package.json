@@ -8,7 +8,7 @@
     "build": "yarn postdfm && yarn stopwatch"
   },
   "devDependencies": {
-    "execa": "^2.0.3",
+    "execa": "^2.1.0",
     "fs-extra": "^8.1.0"
   }
 }
