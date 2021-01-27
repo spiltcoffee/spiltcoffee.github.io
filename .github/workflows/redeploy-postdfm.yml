@@ -22,7 +22,7 @@ jobs:
       - name: git clone spiltcoffee/postdfm
         uses: srt32/git-actions@v0.0.3
         with:
-          args: git clone git@github.com:spiltcoffee/postdfm.git
+          args: git clone https://github.com/spiltcoffee/postdfm.git
 
       - name: yarn build
         uses: borales/actions-yarn@v2.0.0
