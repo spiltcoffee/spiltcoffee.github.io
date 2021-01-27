@@ -1,29 +1,41 @@
-name: Redeploy Website
+name: Redeploy postdfm docs
 
 on: [workflow_dispatch]
 
 jobs:
   redeploy:
-    name: Redeploy Website
+    name: Redeploy postdfm docs
     runs-on: ubuntu-latest
 
     steps:
-      - uses: srt32/git-actions@v0.0.3
       - name: git checkout
         uses: actions/checkout@v2
+
       - name: yarn install
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
+      
+      - run: mkdir temp
+      - run: pushd temp
+
+      - name: git clone spiltcoffee/postdfm
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git clone git@github.com:spiltcoffee/postdfm.git
+
       - name: yarn build
         uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: build
+          cmd: ci
+
+      - run: popd
+      - run: rm -rf docs
+      - run: cp -r temp/postdfm/docs docs
+
       - name: git commit && git push
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: |
-            docs/*
-            stopwatch/*
-          commit-msg: Redeploy Website
+          file-path: docs/*
+          commit-msg: Redepoy postdfm docs
           github-token: ${{ secrets.GITHUB_TOKEN }}
