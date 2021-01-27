@@ -24,14 +24,17 @@ jobs:
         with:
           args: git clone https://github.com/spiltcoffee/postdfm.git
 
+      - run: pushd postdfm
+
       - name: yarn build
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: ci
 
       - run: popd
-      - run: rm -rf docs
+      - run: popd
       - run: cp -r temp/postdfm/docs docs
+      - run: rm -rf docs
 
       - name: git commit && git push
         uses: test-room-7/action-update-file@v1
