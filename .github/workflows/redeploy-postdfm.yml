@@ -17,24 +17,21 @@ jobs:
           cmd: install
       
       - run: mkdir temp
-      - run: pushd temp
-
+ 
       - name: git clone spiltcoffee/postdfm
         uses: srt32/git-actions@v0.0.3
+        working-directory: ./temp
         with:
           args: git clone https://github.com/spiltcoffee/postdfm.git
 
-      - run: pushd postdfm
-
       - name: yarn build
         uses: borales/actions-yarn@v2.0.0
+        working-directory: ./temp/postdfm
         with:
           cmd: ci
 
-      - run: popd
-      - run: popd
-      - run: cp -r temp/postdfm/docs docs
       - run: rm -rf docs
+      - run: cp -r temp/postdfm/docs docs
 
       - name: git commit && git push
         uses: test-room-7/action-update-file@v1
