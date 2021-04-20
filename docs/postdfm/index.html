@@ -2691,6 +2691,9 @@ img {
 		<li class=" tsd-kind-interface">
 			<a href="interfaces/runneroptions.html" class="tsd-kind-icon">Runner<wbr>Options</a>
 		</li>
+		<li class=" tsd-kind-interface">
+			<a href="interfaces/runneroptionssync.html" class="tsd-kind-icon">Runner<wbr>Options<wbr>Sync</a>
+		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="modules.html#parser" class="tsd-kind-icon">Parser</a>
 		</li>
@@ -2698,7 +2701,10 @@ img {
 			<a href="modules.html#stringifier" class="tsd-kind-icon">Stringifier</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="modules.html#default" class="tsd-kind-icon">default</a>
+			<a href="modules.html#postdfm" class="tsd-kind-icon">postdfm</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="modules.html#postdfmsync" class="tsd-kind-icon">postdfm<wbr>Sync</a>
 		</li>
 	</ul>
 </nav>
@@ -2875,6 +2881,7 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-interface"><a href="interfaces/processingoptions.html" class="tsd-kind-icon">Processing<wbr>Options</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/runneroptions.html" class="tsd-kind-icon">Runner<wbr>Options</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/runneroptionssync.html" class="tsd-kind-icon">Runner<wbr>Options<wbr>Sync</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2887,7 +2894,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-function"><a href="modules.html#default" class="tsd-kind-icon">default</a></li>
+							<li class="tsd-kind-function"><a href="modules.html#postdfm" class="tsd-kind-icon">postdfm</a></li>
+							<li class="tsd-kind-function"><a href="modules.html#postdfmsync" class="tsd-kind-icon">postdfm<wbr>Sync</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2901,7 +2909,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Parser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>dfm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">AST.Root</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/fab613b/packages/postdfm/src/index.ts#L23">index.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/1049405/packages/postdfm/src/index.ts#L29">index.ts:29</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2932,7 +2940,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Stringifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>ast<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AST.Root</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/fab613b/packages/postdfm/src/index.ts#L25">index.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/1049405/packages/postdfm/src/index.ts#L31">index.ts:31</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2961,22 +2969,45 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Functions</h2>
 			<section class="tsd-panel tsd-member tsd-kind-function">
-				<a name="default" class="tsd-anchor"></a>
-				<h3>default</h3>
+				<a name="postdfm" class="tsd-anchor"></a>
+				<h3>postdfm</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="interfaces/runneroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">RunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/runner.html" class="tsd-signature-type" data-tsd-kind="Class">Runner</a></li>
+					<li class="tsd-signature tsd-kind-icon">postdfm<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="interfaces/runneroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">RunnerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/runner.html" class="tsd-signature-type" data-tsd-kind="Class">Runner</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/fab613b/packages/postdfm/src/index.ts#L86">index.ts:86</a></li>
+								<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/1049405/packages/postdfm/src/index.ts#L147">index.ts:147</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="interfaces/runneroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">RunnerOptions</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="classes/runner.html" class="tsd-signature-type" data-tsd-kind="Class">Runner</a><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="postdfmsync" class="tsd-anchor"></a>
+				<h3>postdfm<wbr>Sync</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">postdfm<wbr>Sync<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="interfaces/runneroptionssync.html" class="tsd-signature-type" data-tsd-kind="Interface">RunnerOptionsSync</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/runner.html" class="tsd-signature-type" data-tsd-kind="Class">Runner</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/spiltcoffee/postdfm/blob/1049405/packages/postdfm/src/index.ts#L92">index.ts:92</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="interfaces/runneroptionssync.html" class="tsd-signature-type" data-tsd-kind="Interface">RunnerOptionsSync</a></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="classes/runner.html" class="tsd-signature-type" data-tsd-kind="Class">Runner</a></h4>
