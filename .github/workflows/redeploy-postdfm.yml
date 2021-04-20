@@ -33,7 +33,7 @@ jobs:
       - name: github pull request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: update remote
+          commit-message: update postdfm docs
           title: 'Update postdfm docs'
           body: 'Automated redeployment of postdfm docs'
           branch: update/postdfm
