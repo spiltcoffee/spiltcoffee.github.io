@@ -1,6 +1,12 @@
 name: Redeploy postdfm docs
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [postdfm]
+
+env:
+  HUSKY: 0
 
 jobs:
   redeploy:
@@ -8,8 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: setup node
+      - name: setup node 16
         uses: actions/setup-node@v2
+        with:
+          node-version: 16
 
       - name: git checkout
         uses: actions/checkout@v2
@@ -19,6 +27,10 @@ jobs:
         with:
           repository: spiltcoffee/postdfm
           path: temp/postdfm
+
+      - name: (postdfm) yarn install
+        run: yarn install
+        working-directory: temp/postdfm
 
       - name: (postdfm) yarn ci
         run: yarn ci
@@ -34,7 +46,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: update postdfm docs
-          title: 'Update postdfm docs'
-          body: 'Automated redeployment of postdfm docs'
+          title: "Update postdfm docs"
+          body: "Automated redeployment of postdfm docs"
           branch: update/postdfm
           delete-branch: true
