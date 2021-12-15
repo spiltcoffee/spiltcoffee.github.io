@@ -63,6 +63,12 @@ const ingredients = {
       source: "Kill with an Auto Rifle, a Submachine Gun or a Machine Gun",
       icon: "8f362597f7a89d00ab764a62d6af1a2a.jpg"
     },
+    darkFrosting: {
+      title: "Dark Frosting",
+      description: "An ingredient that adds a decadently deep, rich flavor.",
+      source: "Kill with Stasis from any source",
+      icon: "5a25fb6a8dde8514da3258969d926bb0.jpg"
+    },
     deliciousExplosion: {
       title: "Delicious Explosion",
       description: "Sudden and violent. And also tasty.",
@@ -120,13 +126,6 @@ const ingredients = {
       source: "Kill with a Melee",
       icon: "06954590a246b60beccfeaf2088b7cc4.jpg"
     },
-    pinchOfLight: {
-      title: "Pinch of Light",
-      description:
-        "An ingredient that adds a touch of the Traveler's Light to your recipe.",
-      source: "Collect an Orb of Power",
-      icon: "a5da475095401f2da5e74e8f50d78cbe.jpg"
-    },
     sharpFlavor: {
       title: "Sharp Flavor",
       description: "A taste that will cut right through your taste buds.",
@@ -143,6 +142,16 @@ const ingredients = {
 };
 
 const recipes = {
+  ascendantAppleTart: {
+    title: "Ascendant Apple Tart",
+    description:
+      "Deliver this exquisite delight to Queen Mara Sov in her chambers via the H.E.L.M.",
+    icon: "bd5edc0ef99acd2c6da6af788f59e33c.jpg",
+    ingredients: {
+      common: ingredients.common.takenButter,
+      rare: ingredients.rare.sharpFlavor
+    }
+  },
   ascendantOatmealRasinCookies: {
     title: "Ascendant Oatmeal Raisin Cookies",
     description:
@@ -257,6 +266,16 @@ const recipes = {
       rare: ingredients.rare.deliciousExplosion
     }
   },
+  hotCrossfireBuns: {
+    title: "Hot Crossfire Buns",
+    description:
+      "Deliver this impeccably crafted treat to Ada-1 in the Tower Annex.",
+    icon: "ff9810abba7b40868b013eb944fa5756.jpg",
+    ingredients: {
+      common: ingredients.common.etherCane,
+      rare: ingredients.rare.balancedFlavors
+    }
+  },
   illFortuneCookies: {
     title: "Ill-Fortune Cookies",
     description:
@@ -285,6 +304,15 @@ const recipes = {
     ingredients: {
       common: ingredients.common.vexMilk,
       rare: ingredients.rare.personalTouch
+    }
+  },
+  stalwortThins: {
+    title: "Stalwort Thins",
+    description: "Deliver this timeless classic to the Exo Stranger on Europa.",
+    icon: "10e6e4678c665776a1bc18417de365f6.jpg",
+    ingredients: {
+      common: ingredients.common.darkEtherCane,
+      rare: ingredients.rare.darkFrosting
     }
   },
   strangeCookies: {
