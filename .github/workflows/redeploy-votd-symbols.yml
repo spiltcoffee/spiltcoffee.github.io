@@ -32,7 +32,7 @@ jobs:
         run: rm -rf d2/votd/symbols
 
       - name: cp votd-symbols
-        run: cp -r temp/votd-symbols/dist d2/votd/symbols
+        run: mkdir -p d2/votd/symbols && cp -r temp/votd-symbols/dist d2/votd/symbols
 
       - name: github pull request
         uses: peter-evans/create-pull-request@v3
