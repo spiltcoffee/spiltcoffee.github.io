@@ -27,7 +27,7 @@ jobs:
       - name: (votd-symbols) yarn build
         run: yarn build
         env:
-          VOTD_SYMBOLS_PATH: d2/votd/symbols/
+          VOTD_SYMBOLS_PATH: /d2/votd/symbols/
         working-directory: temp/votd-symbols
 
       - name: rm votd-symbols
