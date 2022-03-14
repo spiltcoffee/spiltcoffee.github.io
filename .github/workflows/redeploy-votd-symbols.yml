@@ -26,13 +26,15 @@ jobs:
 
       - name: (votd-symbols) yarn build
         run: yarn build
+        env:
+          VOTD_SYMBOLS_PATH: d2/votd/symbols/
         working-directory: temp/votd-symbols
 
       - name: rm votd-symbols
-        run: rm -rf d2/votd/symbols
+        run: rm -rf d2/votd/symbols/
 
       - name: cp votd-symbols
-        run: mkdir -p d2/votd/symbols && cp -r temp/votd-symbols/dist d2/votd/symbols
+        run: mkdir -p d2/votd/symbols/ && cp -r temp/votd-symbols/dist/* d2/votd/symbols/
 
       - name: github pull request
         uses: peter-evans/create-pull-request@v3
