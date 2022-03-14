@@ -20,18 +20,18 @@ jobs:
           repository: spiltcoffee/votd-symbols
           path: temp/votd-symbols
 
-      - name: (stopwatch) yarn install
+      - name: (votd-symbols) yarn install
         run: yarn install --immutable
         working-directory: temp/votd-symbols
 
-      - name: (stopwatch) yarn build
+      - name: (votd-symbols) yarn build
         run: yarn build
         working-directory: temp/votd-symbols
 
-      - name: rm stopwatch
+      - name: rm votd-symbols
         run: rm -rf d2/votd/symbols
 
-      - name: cp stopwatch
+      - name: cp votd-symbols
         run: cp -r temp/votd-symbols/dist d2/votd/symbols
 
       - name: github pull request
