@@ -1,0 +1,44 @@
+name: Redeploy votd-symbols
+
+on: [workflow_dispatch]
+
+jobs:
+  redeploy:
+    name: Redeploy votd-symbols
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup node
+        uses: actions/setup-node@v2
+
+      - name: git checkout
+        uses: actions/checkout@v2
+
+      - name: git checkout spiltcoffee/votd-symbols
+        uses: actions/checkout@v2
+        with:
+          repository: spiltcoffee/votd-symbols
+          path: temp/votd-symbols
+
+      - name: (stopwatch) yarn install
+        run: yarn install --immutable
+        working-directory: temp/votd-symbols
+
+      - name: (stopwatch) yarn build
+        run: yarn build
+        working-directory: temp/votd-symbols
+
+      - name: rm stopwatch
+        run: rm -rf d2/votd/symbols
+
+      - name: cp stopwatch
+        run: cp -r temp/votd-symbols/dist d2/votd/symbols
+
+      - name: github pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: update votd-symbols
+          title: "Update votd-symbols"
+          body: "Automated redeployment of votd-symbols"
+          branch: update/votd-symbols
+          delete-branch: true
