@@ -1,6 +1,9 @@
 name: Redeploy votd-symbols
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [votd-symbols]
 
 jobs:
   redeploy:
