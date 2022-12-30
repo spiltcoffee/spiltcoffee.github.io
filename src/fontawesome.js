@@ -1,4 +1,8 @@
-import { faExternalLinkSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMugHot,
+  faStopwatch,
+  faExternalLinkSquare
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faMastodon,
@@ -7,6 +11,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const icons = {
+  mughot: faMugHot,
+  stopwatch: faStopwatch,
   external: faExternalLinkSquare,
   github: faGithub,
   mastodon: faMastodon,

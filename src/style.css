@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  @apply text-gray-800 flex flex-col h-full;
+  @apply min-h-full h-full;
+}
+
+body {
+  @apply text-gray-800 flex flex-col;
 }
