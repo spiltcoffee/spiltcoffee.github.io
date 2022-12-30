@@ -1,102 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>SpiltCoffee</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/5d25efde06.js"></script>
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="text-gray-800 flex flex-col h-full">
-    <header class="p-4 bg-blue-900">
-      <div class="text-2xl text-gray-100">
-        <i class="fas fa-mug-hot"></i> SpiltCoffee
-      </div>
-      <div class="text-gray-300 mt-1">A list of my current projects</div>
-    </header>
-    <main class="flex-1 bg-gray-100">
-      <div class="flex flex-col shadow m-2 bg-white">
-        <h1 class="m-3 text-xl font-bold">postdfm</h1>
-        <p class="m-3">Provides an API for easily transforming Delphi Forms.</p>
-        <div class="m-3 flex flex-wrap">
-          <a
-            href="https://github.com/spiltcoffee/postdfm"
-            class="border rounded p-2 bg-gray-100 hover:bg-green-200 mr-1 mb-1"
-            ><i class="fab fa-github"></i> Github</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/postdfm"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> postdfm</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/@postdfm/ast"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> @postdfm/ast</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/@postdfm/ast2dfm"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> @postdfm/ast2dfm</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/@postdfm/dfm2ast"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> @postdfm/dfm2ast</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/@postdfm/plugin"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> @postdfm/plugin</a
-          >
-          <a
-            href="https://spiltcoffee.com/docs/@postdfm/transform"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-book"></i> @postdfm/transform</a
-          >
-        </div>
-      </div>
-      <div class="flex flex-col shadow m-2 bg-white">
-        <h1 class="m-3 text-xl font-bold">stopwatch</h1>
-        <p class="m-3">
-          Stopwatch I made for use with managing Virtual Reality sessions.
-          Probably useful in other scenarios.
-        </p>
-        <div class="m-3 flex flex-wrap">
-          <a
-            href="https://github.com/spiltcoffee/stopwatch"
-            class="border rounded p-2 bg-gray-100 hover:bg-green-200 mr-1 mb-1"
-            ><i class="fab fa-github"></i> Github</a
-          >
-          <a
-            href="https://spiltcoffee.com/stopwatch"
-            class="border rounded p-2 bg-gray-100 hover:bg-blue-200 mr-1 mb-1"
-            ><i class="fas fa-stopwatch"></i> stopwatch</a
-          >
-        </div>
-      </div>
-    </main>
-    <footer class="bg-blue-800 text-gray-200 p-2 text-sm flex">
-      <div class="flex-1">
-        <a
-          href="https://github.com/spiltcoffee"
-          class="rounded p-1 hover:bg-green-900"
-          ><i class="fab fa-github"></i> Github</a
-        >
-        <a
-          rel="me"
-          href="https://mastodon.au/@spiltcoffee"
-          class="rounded p-1 hover:bg-indigo-900"
-          ><i class="fab fa-mastodon"></i> Mastodon</a
-        >
-        <a
-          href="https://twitter.com/spiltcoffee"
-          class="rounded p-1 hover:bg-blue-900"
-          ><i class="fab fa-twitter"></i> Twitter</a
-        >
-      </div>
-      <span>This website punches Nazis</span>
-    </footer>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
