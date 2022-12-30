@@ -4,7 +4,7 @@
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "format": "prettier . --write --ignore-path .gitignore \"!.yarn\"",
-    "lint": "eslint . --fix --ignore-path .gitignore \"!.yarn\"",
+    "lint": "eslint . --fix --ignore-path .gitignore",
     "dev": "echo \"not implemented\"",
     "build": "echo \"not implemented\"",
     "serve": "echo \"not implemented\""

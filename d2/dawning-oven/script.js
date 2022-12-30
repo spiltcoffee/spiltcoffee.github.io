@@ -512,7 +512,7 @@ function generateIngredientsList(ingredients) {
   const ingredientsListEl = document.createElement("div");
   ingredientsListEl.classList.add(...classes.list);
 
-  Object.entries(ingredients).forEach(([_, ingredient]) => {
+  Object.entries(ingredients).forEach(([, ingredient]) => {
     ingredientsListEl.appendChild(generateIngredient(ingredient));
   });
 
@@ -539,7 +539,7 @@ function generateCookbook(appEl) {
   const recipesListEl = document.createElement("div");
   recipesListEl.classList.add(...classes.list);
 
-  Object.entries(recipes).forEach(([_, recipe]) => {
+  Object.entries(recipes).forEach(([, recipe]) => {
     recipesListEl.appendChild(generateRecipe(recipe));
   });
 
