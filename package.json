@@ -1,5 +1,12 @@
 {
-  "name": "spiltcoffee.github.io",
   "private": true,
-  "packageManager": "yarn@3.3.1"
+  "name": "spiltcoffee.github.io",
+  "packageManager": "yarn@3.3.1",
+  "scripts": {
+    "format": "prettier . --write --ignore-path .gitignore \"!.yarn\"",
+    "lint": "eslint . --fix --ignore-path .gitignore \"!.yarn\"",
+    "dev": "echo \"not implemented\"",
+    "build": "echo \"not implemented\"",
+    "serve": "echo \"not implemented\""
+  }
 }
