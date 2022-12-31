@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const icons = {
-  mughot: faMugHot,
+  mug: faMugHot,
   stopwatch: faStopwatch,
   external: faExternalLinkSquare,
   github: faGithub,
