@@ -406,7 +406,7 @@ const classes = {
 
 function generateIcon({ icon, title }) {
   const iconEl = document.createElement("img");
-  iconEl.src = `icons/${icon}`;
+  iconEl.src = `/d2/dawning-oven/icons/${icon}`;
   iconEl.alt = title;
   iconEl.title = title;
   iconEl.classList.add(...classes.icon);
