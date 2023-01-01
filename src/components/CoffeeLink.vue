@@ -10,6 +10,10 @@ const props = defineProps({
     type: String,
     required: true
   },
+  icon: {
+    type: String,
+    default: ""
+  },
   rel: {
     type: String,
     default: "noreferer noopener"
@@ -35,7 +39,7 @@ const external = computed(
     class="coffee-link"
     :class="{ [`coffee-link--${type}`]: type !== 'link' }"
   >
-    <CoffeeIcon :icon="text" />
+    <CoffeeIcon :icon="icon || text" />
     {{ text }}
     <CoffeeIcon v-if="external" icon="external" />
   </a>

@@ -2,7 +2,8 @@ import {
   faMugHot,
   faStopwatch,
   faExternalLinkSquare,
-  faIcons
+  faIcons,
+  faBook
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -19,5 +20,6 @@ export const icons = {
   github: faGithub,
   mastodon: faMastodon,
   twitter: faTwitter,
-  discord: faDiscord
+  discord: faDiscord,
+  docs: faBook
 };

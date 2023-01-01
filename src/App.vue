@@ -30,42 +30,42 @@ provide("icons", icons);
       <CoffeeLink
         text="postdfm"
         link="/postdfm/docs/postdfm"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/ast"
         link="/postdfm/docs/@postdfm/ast"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/ast2dfm"
         link="/postdfm/docs/@postdfm/ast2dfm"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/dfm2ast"
         link="/postdfm/docs/@postdfm/dfm2ast"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/plugin"
         link="/postdfm/docs/@postdfm/plugin"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/transform"
         link="/postdfm/docs/@postdfm/transform"
-        icon="book"
+        icon="docs"
         type="button"
         class="hover:bg-blue-200"
       />
