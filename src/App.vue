@@ -87,6 +87,24 @@ provide("icons", icons);
         class="hover:bg-blue-200"
       />
     </CoffeeCard>
+    <CoffeeCard
+      title="votd-symbols"
+      description="Helper for the symbols in the Destiny 2 raid Vow of the Disciple."
+    >
+      <CoffeeLink
+        text="Github"
+        link="https://github.com/spiltcoffee/votd-symbols"
+        type="button"
+        class="hover:bg-green-200"
+      />
+      <CoffeeLink
+        text="votd-symbols"
+        link="https://spiltcoffee.com/votd-symbols"
+        icon="symbols"
+        type="button"
+        class="hover:bg-blue-200"
+      />
+    </CoffeeCard>
   </CoffeeMain>
   <CoffeeFooter>
     <CoffeeLink

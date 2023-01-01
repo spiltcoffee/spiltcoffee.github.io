@@ -1,7 +1,8 @@
 import {
   faMugHot,
   faStopwatch,
-  faExternalLinkSquare
+  faExternalLinkSquare,
+  faIcons
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -13,6 +14,7 @@ import {
 export const icons = {
   mug: faMugHot,
   stopwatch: faStopwatch,
+  symbols: faIcons,
   external: faExternalLinkSquare,
   github: faGithub,
   mastodon: faMastodon,
