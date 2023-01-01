@@ -29,42 +29,42 @@ provide("icons", icons);
       />
       <CoffeeLink
         text="postdfm"
-        link="https://spiltcoffee.com/postdfm/docs/postdfm"
+        link="/postdfm/docs/postdfm"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/ast"
-        link="https://spiltcoffee.com/postdfm/docs/@postdfm/ast"
+        link="/postdfm/docs/@postdfm/ast"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/ast2dfm"
-        link="https://spiltcoffee.com/postdfm/docs/@postdfm/ast2dfm"
+        link="/postdfm/docs/@postdfm/ast2dfm"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/dfm2ast"
-        link="https://spiltcoffee.com/postdfm/docs/@postdfm/dfm2ast"
+        link="/postdfm/docs/@postdfm/dfm2ast"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
         text="@postdfm/plugin"
-        link="https://spiltcoffee.com/postdfm/docs/@postdfm/plugin"
+        link="/postdfm/docs/@postdfm/plugin"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
       />
       <CoffeeLink
-        text="@postdfm/transformer"
-        link="https://spiltcoffee.com/postdfm/docs/@postdfm/transformer"
+        text="@postdfm/transform"
+        link="/postdfm/docs/@postdfm/transform"
         icon="book"
         type="button"
         class="hover:bg-blue-200"
@@ -82,7 +82,7 @@ provide("icons", icons);
       />
       <CoffeeLink
         text="stopwatch"
-        link="https://spiltcoffee.com/stopwatch"
+        link="/stopwatch"
         type="button"
         class="hover:bg-blue-200"
       />
@@ -99,7 +99,7 @@ provide("icons", icons);
       />
       <CoffeeLink
         text="votd-symbols"
-        link="https://spiltcoffee.com/votd-symbols"
+        link="/votd-symbols"
         icon="symbols"
         type="button"
         class="hover:bg-blue-200"

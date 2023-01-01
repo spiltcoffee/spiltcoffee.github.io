@@ -22,13 +22,16 @@ const props = defineProps({
 
 const { text, link, rel, type } = toRefs(props);
 
-const external = computed(() => new URL(link.value).origin !== window.origin);
+const external = computed(
+  () => new URL(link.value, window.origin).origin !== window.origin
+);
 </script>
 
 <template>
   <a
     :href="link"
     :rel="rel"
+    :target="external ? '_blank' : false"
     class="coffee-link"
     :class="{ [`coffee-link--${type}`]: type !== 'link' }"
   >
