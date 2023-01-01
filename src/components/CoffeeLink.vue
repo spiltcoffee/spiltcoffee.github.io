@@ -35,7 +35,7 @@ const external = computed(
   <a
     :href="link"
     :rel="rel"
-    :target="external ? '_blank' : false"
+    :target="external ? '_blank' : ''"
     class="coffee-link"
     :class="{ [`coffee-link--${type}`]: type !== 'link' }"
   >
