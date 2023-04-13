@@ -105,6 +105,24 @@ provide("icons", icons);
         class="hover:bg-blue-200"
       />
     </CoffeeCard>
+    <CoffeeCard
+      title="d2-changelog"
+      description="A single page app of Destiny 2 hotfixes and updates you can Ctrl + F."
+    >
+      <CoffeeLink
+        text="Github"
+        link="https://github.com/spiltcoffee/d2-changelog"
+        type="button"
+        class="hover:bg-green-200"
+      />
+      <CoffeeLink
+        text="d2-changelog"
+        link="/d2-changelog"
+        icon="changelog"
+        type="button"
+        class="hover:bg-blue-200"
+      />
+    </CoffeeCard>
   </CoffeeMain>
   <CoffeeFooter>
     <CoffeeLink
