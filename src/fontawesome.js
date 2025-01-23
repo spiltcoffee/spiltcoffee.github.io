@@ -9,7 +9,7 @@ import {
 import {
   faGithub,
   faMastodon,
-  faTwitter,
+  faBluesky,
   faDiscord
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -20,7 +20,7 @@ export const icons = {
   external: faExternalLinkSquare,
   github: faGithub,
   mastodon: faMastodon,
-  twitter: faTwitter,
+  bluesky: faBluesky,
   discord: faDiscord,
   docs: faBook,
   changelog: faCodeMerge

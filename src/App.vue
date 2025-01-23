@@ -131,15 +131,15 @@ provide("icons", icons);
       class="hover:bg-green-900"
     />
     <CoffeeLink
+      text="Bluesky"
+      link="https://bsky.app/profile/spiltcoffee.com"
+      class="hover:bg-blue-900"
+    />
+    <CoffeeLink
       text="Mastodon"
       link="https://mastodon.au/@spiltcoffee"
       rel="me noreferer noopener"
       class="hover:bg-indigo-900"
-    />
-    <CoffeeLink
-      text="Twitter"
-      link="https://twitter.com/spiltcoffee"
-      class="hover:bg-blue-900"
     />
   </CoffeeFooter>
 </template>
